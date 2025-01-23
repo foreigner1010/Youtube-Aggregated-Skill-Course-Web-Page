@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Security Course - Free Learning Platform</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Course Header -->
+        <header class="course-header">
+            <div class="course-info">
+                <h1>Web Security Fundamentals</h1>
+                <div class="course-meta">
+                    <span><i class="fas fa-signal"></i> Intermediate</span>
+                    <span><i class="fas fa-clock"></i> 10 hours</span>
+                    <span><i class="fas fa-video"></i> 8 lectures</span>
+                    <span><i class="fas fa-star"></i> 4.8/5 (2.3k reviews)</span>
+                </div>
+                <button class="enroll-btn">ENROLL COURSE</button>
+            </div>
+        </header>
+
+        <main class="course-content">
+            <div class="content-wrapper">
+                <!-- Video Player Section -->
+                <section class="video-section">
+                    <div class="video-container">
+                        <div id="player"></div>
+                    </div>
+                    <div class="video-controls">
+                        <button id="prevVideo"><i class="fas fa-step-backward"></i> Previous</button>
+                        <div class="caption-controls">
+                            <button id="toggleCaptions" class="caption-btn">
+                                <i class="fas fa-closed-captioning"></i> CC
+                            </button>
+                            <select id="captionLanguage" class="caption-language">
+                                <option value="">Select Language</option>
+                                <option value="en">English</option>
+                                <option value="es">Spanish</option>
+                                <option value="fr">French</option>
+                                <option value="de">German</option>
+                                <option value="hi">Hindi</option>
+                            </select>
+                        </div>
+                        <button id="nextVideo">Next <i class="fas fa-step-forward"></i></button>
+                    </div>
+                </section>
+
+                <!-- Progress Section -->
+                <section class="progress-section">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 25%"></div>
+                    </div>
+                    <span class="progress-text">25% Complete</span>
+                    <button id="downloadCertificate" class="certificate-btn" disabled>
+                        <i class="fas fa-certificate"></i> Download Certificate
+                    </button>
+                </section>
+
+                <!-- Gamification Section -->
+                <section class="gamification-section">
+                    <div class="points-container">
+                        <div class="points">
+                            <i class="fas fa-gem"></i>
+                            <span id="userPoints">0</span> Points
+                        </div>
+                        <div class="level">
+                            Level <span id="userLevel">1</span>
+                        </div>
+                    </div>
+                    <div class="badges-container">
+                        <h3>Your Badges</h3>
+                        <div class="badges-grid">
+                            <!-- Badges will be populated by JavaScript -->
+                            <div class="badge" id="badge-level-1" style="display: none;">
+                                <div class="badge-icon">🪄</div>
+                                <div class="badge-name">Novice Learner</div>
+                            </div>
+                            <div class="badge" id="badge-level-2" style="display: none;">
+                                <div class="badge-icon">📘</div>
+                                <div class="badge-name">Adept Learner</div>
+                            </div>
+                            <div class="badge" id="badge-level-3" style="display: none;">
+                                <div class="badge-icon">🏅</div>
+                                <div class="badge-name">Proficient Learner</div>
+                            </div>
+                            <div class="badge" id="badge-level-4" style="display: none;">
+                                <div class="badge-icon">🎖️</div>
+                                <div class="badge-name">Expert Learner</div>
+                            </div>
+                            <div class="badge" id="badge-level-5" style="display: none;">
+                                <div class="badge-icon">🏆</div>
+                                <div class="badge-name">Master Learner</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leaderboard">
+                        <h3>Top Learners</h3>
+                        <div class="leaderboard-list">
+                            <!-- Leaderboard will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Community Section -->
+                <section class="community-section">
+                    <div class="discussion-forum">
+                        <h3>Discussion Forum</h3>
+                        <div class="discussion-container">
+                            <div class="post-form">
+                                <textarea id="postContent" placeholder="Share your thoughts or ask a question..."></textarea>
+                                <button id="submitPost">Post</button>
+                            </div>
+                            <div class="posts-list">
+                                <!-- Posts will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tools Section -->
+                <section class="tools-section">
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="notes">Notes</button>
+                        <button class="tab-btn" data-tab="ai-summary">AI Summary</button>
+                        <button class="tab-btn" data-tab="questions">Practice Questions</button>
+                    </div>
+                    <div class="tab-content">
+                        <div id="notes" class="tab-pane active">
+                            <textarea placeholder="Add your notes here..."></textarea>
+                            <button class="save-btn">Save Notes</button>
+                        </div>
+                        <div id="ai-summary" class="tab-pane">
+                            <div class="ai-content">
+                                <h3>Key Points:</h3>
+                                <ul id="summary-points">
+                                    <!-- Populated by JavaScript -->
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="questions" class="tab-pane">
+                            <div class="quiz-container">
+                                <!-- Populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Video List Sidebar -->
+            <aside class="video-list">
+                <h2>Course Content</h2>
+                <div class="video-items">
+                    <!-- Video items will be populated by JavaScript -->
+                </div>
+            </aside>
+        </main>
+
+        <!-- Job Seeker Tips Section -->
+        <section class="job-tips">
+            <h2>Job Seeker Tips</h2>
+            <div class="tips-carousel">
+                <!-- Populated by JavaScript -->
+            </div>
+        </section>
+
+        <section class="course-rating">
+            <h2>Rate this Course</h2>
+            <div class="rating-wrapper">
+                <div class="star-rating">
+                    <i class="far fa-star" data-rating="1"></i>
+                    <i class="far fa-star" data-rating="2"></i>
+                    <i class="far fa-star" data-rating="3"></i>
+                    <i class="far fa-star" data-rating="4"></i>
+                    <i class="far fa-star" data-rating="5"></i>
+                </div>
+                <p class="rating-text">Click to rate</p>
+                <textarea id="review-text" placeholder="Write your review (optional)"></textarea>
+                <button id="submit-rating">Submit Review</button>
+            </div>
+        </section>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
