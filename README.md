@@ -51,6 +51,10 @@ git clone [repository-url]
 # No server setup required - it's a static website!
 ```
 
+## 🌐 Live Demo
+
+Check out the live demo of the project at: [skillcoursepage.netlify.app](https://skillcoursepage.netlify.app)
+
 ## 💻 Technical Stack
 
 - HTML5
